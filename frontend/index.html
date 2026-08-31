@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Feedback</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <div class="header">
+                <div class="badge">SERVERLESS • AWS</div>
+
+                <h1>Share Your Feedback</h1>
+
+                <p>
+                    Your feedback helps us improve.
+                    Submit your thoughts and optionally attach a document.
+                </p>
+            </div>
+
+
+            <form id="feedbackForm">
+
+                <!-- Name -->
+                <div class="form-group">
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Email -->
+                <div class="form-group">
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Feedback -->
+                <div class="form-group">
+
+                    <label for="message">
+                        Feedback
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        placeholder="Tell us what you think..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- File -->
+                <div class="form-group">
+
+                    <label for="file">
+                        Attachment
+                        <span class="optional">(optional)</span>
+                    </label>
+
+                    <div class="file-input">
+
+                        <input
+                            type="file"
+                            id="file"
+                            name="file"
+                            accept=".pdf"
+                        >
+
+                    </div>
+
+                    <small>
+                        PDF files only • Maximum 5 MB
+                    </small>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button
+                    type="submit"
+                    id="submitButton"
+                >
+                    Submit Feedback
+                </button>
+
+
+                <!-- Status -->
+                <div
+                    id="status"
+                    class="status"
+                    role="status"
+                ></div>
+
+            </form>
+
+        </section>
+
+
+        <footer>
+
+            <span>Built with AWS Serverless</span>
+
+            <span>•</span>
+
+            <span>Lambda · API Gateway · DynamoDB · S3 · SES</span>
+
+        </footer>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
